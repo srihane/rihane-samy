@@ -1,5 +1,5 @@
 // Documents config
-let config = require('../config/config.json')
+let config = require('../../config.json')
 
 //Socketio
 //import io from "socket.io-client";

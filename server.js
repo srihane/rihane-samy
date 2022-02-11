@@ -1,8 +1,8 @@
 // Enable or Disable HTTPS
-let enable_HTTPS = false; // DISABLE HTTPS when on local more easy
+let enable_HTTPS = true; // DISABLE HTTPS when on local more easy
 
 //Global data
-//let config = require('../config/config.json')
+let config = require('./config.json')
 
 // MYSQL
 /*
@@ -65,8 +65,7 @@ const io = socketio(server, {
     methods: ["GET", "POST"]
   }
 })
-//var port = config.port
-var port = 1000
+var port = config.port
 
 /*
 app.get("/", function(req, res){
