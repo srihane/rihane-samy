@@ -1,0 +1,33 @@
+<template>
+
+<div class="fixed-bottom d-flex justify-content-center">
+    <button style="width:200px;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i class="fa-solid fa-bars"></i></button>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+
+    <!--<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+    <div class="backdrop-sidenav">
+        <div class="backdrop-pp">
+        </div>
+    </div>
+
+  </div>
+  <div class="offcanvas-body">
+    <p>.....</p>
+  </div>
+</div>
+
+
+
+</template>
+<script>
+export default {
+    
+}
+</script>
+<style lang="">
+    
+</style>
