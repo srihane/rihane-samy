@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
+import Chat from '@/views/Chat.vue'
 import ErrorPage from '@/views/ErrorPage.vue'
 
 
@@ -11,6 +12,14 @@ const routes = [
         component: Home,
         meta: {
             title: 'Home'
+        }
+    },
+    {
+        name: 'Chat',
+        path: '/tchat',
+        component: Chat,
+        meta: {
+            title: 'Tchat'
         }
     },
     {

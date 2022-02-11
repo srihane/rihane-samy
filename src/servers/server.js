@@ -42,8 +42,8 @@ if( enable_HTTPS == true ){ // IF HTTPS
     // ONLY ON HTTP
     https = require('https');
     const https_options = {
-        key: fs.readFileSync('/etc/letsencrypt/live/< MY PROJECT >/privkey.pem'), // <----------------- CHANGE IT
-        cert: fs.readFileSync('/etc/letsencrypt/live/< MY PROJECT >/cert.pem'), // <----------------- CHANGE IT
+        key: fs.readFileSync('/etc/letsencrypt/live/rihane-samy.fr/privkey.pem'), // <----------------- CHANGE IT
+        cert: fs.readFileSync('/etc/letsencrypt/live/rihane-samy.fr/cert.pem'), // <----------------- CHANGE IT
         //requestCert: false,
         rejectUnauthorized: false
     }
@@ -66,7 +66,7 @@ const io = socketio(server, {
   }
 })
 //var port = config.port
-var port = 3000
+var port = 1000
 
 /*
 app.get("/", function(req, res){
@@ -131,6 +131,7 @@ function getUsers() {
   {
     //users.push(usersConnected[socketid])
     users.push({
+      socketid: socketid,
       user: usersConnected[socketid]
     })
   }

@@ -1,7 +1,7 @@
 {
     "port": 1000,
-    "server": "http://localhost:",
-    "2server": "https://localhost:",
+    "1server": "http://localhost:1000",
+    "server": "https://rihane-samy.fr:1000",
 
     "database": {
         "host": "localhost",

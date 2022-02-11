@@ -36,6 +36,10 @@
 
     <div class="side-menu">
 
+        <router-link to="/tchat">
+        <div class="side-menu-link"><div class="container"><i class="fa-solid fa-comments"></i> Tchat</div></div>
+        </router-link>
+
         <a href="#">
         <div class="side-menu-link"><div class="container">Articles</div></div>
         </a>

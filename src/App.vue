@@ -2,7 +2,7 @@
   <!--<img alt="Vue logo" src="./assets/logo.png">-->
   <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <Menu />
-  <Home />
+  <router-view></router-view>
 
 </template>
 
@@ -17,8 +17,6 @@ require('./css/style.css');
 // Components
 import Menu from './components/Menu.vue'
 
-// Views
-import Home from './views/Home.vue'
 
 export default {
   name: 'App',
@@ -29,7 +27,6 @@ export default {
   },
   components: {
     Menu,
-    Home,
     //HelloWorld
   },
   mounted() {
