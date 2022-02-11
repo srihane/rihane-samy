@@ -2,9 +2,10 @@
 let enable_HTTPS = false; // DISABLE HTTPS when on local more easy
 
 //Global data
-let config = require('../config/config.json')
+//let config = require('../config/config.json')
 
 // MYSQL
+/*
 const mysql = require('mysql');
 console.log(config.database)
 
@@ -15,6 +16,7 @@ console.log(config.database)
     user: config.login,
     password: config.mdp
   });
+*/
 
 var today = new Date();
 var Datetime = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
@@ -63,7 +65,8 @@ const io = socketio(server, {
     methods: ["GET", "POST"]
   }
 })
-var port = config.port
+//var port = config.port
+var port = 3000
 
 /*
 app.get("/", function(req, res){
@@ -73,15 +76,43 @@ app.get("/", function(req, res){
 })
 */
 
+//Liste des utilisateurs
+let usersConnected = []
+
 io.on('connection', function(socket){
+  //console.log(socket)
   //console.log(socket)
   console.log('a user is connected : '+socket.id);
 
-    //Connexion new wallet or ancient wallet & send informations
-    socket.on('userConnect', function(data_userConnect) {
-        socket.emit('userConnect', result);
 
-    });// socket.on('userConnect'
+    //Connexion new wallet or ancient wallet & send informations
+    
+    socket.on('newconnected', username => {
+      usersConnected[socket.id] = username
+      console.log(usersConnected)
+      socket.broadcast.emit("newconnected", getUsers())
+      socket.emit("newconnected", getUsers())
+    });
+
+  //Connexion new wallet or ancient wallet & send informations
+  socket.on('message', data => {
+    //socket.emit('message', result);
+    console.log(data)
+    socket.broadcast.emit("message:received", data)
+  });
+
+
+  // Only when user disconnect
+  socket.on('disconnect', () => {
+    console.log("user "+socket.id+" has left")
+    if(usersConnected[socket.id])
+    {
+      delete usersConnected[socket.id]
+      socket.broadcast.emit("newconnected", getUsers())
+      console.log(usersConnected)
+    }
+    
+  })
 
 }); //io.on connection -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/--/-/-/-/-
 
@@ -91,3 +122,18 @@ server.listen(port, function(){
   console.log("Server is running on port : "+port);
 })
 
+
+
+function getUsers() {
+  let users = []
+
+  for(let socketid in usersConnected)
+  {
+    //users.push(usersConnected[socketid])
+    users.push({
+      user: usersConnected[socketid]
+    })
+  }
+
+  return users
+}

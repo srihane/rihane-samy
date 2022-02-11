@@ -22,10 +22,18 @@ import Home from './views/Home.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+
+    }
+  },
   components: {
     Menu,
     Home,
     //HelloWorld
+  },
+  mounted() {
+    //console.log("created")  
   }
 }
 </script>

@@ -42,10 +42,14 @@
 
 
 /* TEXT COLORS */
-.text-white {
+.text {
+    color: black;
+}
+
+.white {
     color: white;
 }
 
-.text-black {
+.black {
     color: black;
 }

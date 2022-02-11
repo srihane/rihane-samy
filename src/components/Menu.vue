@@ -16,14 +16,15 @@
             </div>
 
                 <br />
-                <div class="text-white">
+                <div>
                     <span class="text-white">RIHANE Samy | <span style="text-decoration: underline;">Product Owner</span></span>
                 </div>
-                <div class="text-white">
+                <div>
                     <span class="text-white">Entreprise actuel : <img src="../assets/images/free-logo.png" width="90" /></span>
                 </div>
-                <div class="text-white">
-                    <span class="text-white"><i class="fa-regular fa-envelope"></i> <a class="text-white" href="rihane.samy@icloud.com">rihane.samy@icloud.com</a></span>
+
+                <div style="margin-top: 20px !important;">
+                    <span class="text white"><i class="fa-regular fa-envelope"></i> <a class="text-white" href="mailto:rihane.samy@icloud.com">rihane.samy@icloud.com</a></span>
                 </div>
                 <br />
 
@@ -55,10 +56,13 @@
         <h4>Social</h4>
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link text-black" aria-current="page" href="https://www.linkedin.com/in/samy-rihane-b33898115/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                <a class="nav-link text black" aria-current="page" href="https://www.linkedin.com/in/samy-rihane-b33898115/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-black" href="https://github.com/srihane" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+                <a class="nav-link text black" href="https://medium.com/@rihane.samy" target="_blank"><i class="fa-brands fa-medium fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text black" href="https://github.com/srihane" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
             </li>
         </ul>
     </div>

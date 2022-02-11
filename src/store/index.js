@@ -19,6 +19,9 @@
 
 //import Web3 from 'web3';
 
+// Socket.io
+//import io from 'socket.io-client'
+
 import Vuex from 'vuex'
 
 
@@ -27,6 +30,9 @@ const store = new Vuex.Store({
     state: {
         //globalconfig: config,
         //server: config.server
+        userData: {
+            joined: false,
+        }
     },
     getters: {
         
@@ -35,7 +41,7 @@ const store = new Vuex.Store({
 
     },
     actions: {  
-
+        
     },
 
 })
