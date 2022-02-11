@@ -1,7 +1,51 @@
+.offcanvas-start {
+    width: 300px !important;
+}
+
+.offcanvas-header {
+    padding: 0 !important;
+}
+
 .backdrop-sidenav {
-    background-image: url();
+    background-image: url("../assets/images/backdrop.png");
+    background-size: cover;
+    width: 100vw;
 }
 
 .backdrop-pp {
-    
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+/* SIDE NAV MENU */
+
+.side-menu .side-menu-link {
+    /*background-color: red !important;*/
+    padding: 10px;
+}
+
+.side-menu .side-menu-link:hover {
+    background-color: lightgrey !important;
+}
+
+.side-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* TEXT COLORS */
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
 }
