@@ -1,3 +1,29 @@
+@font-face {
+    font-family: "Anton";
+    src: url("../assets/fonts/Anton/Anton-Regular.ttf"),
+}
+
+.btn-menu {
+    background-color: #224886 !important;
+    color: white;
+    border: none !important;
+    padding: 10px;
+
+    transition: 0.4s;
+}
+
+.btn-menu:hover {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.shadowed
+{
+    filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.8));
+}
+
+
+
 .offcanvas-start {
     width: 300px !important;
 }

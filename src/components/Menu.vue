@@ -1,7 +1,7 @@
 <template>
 
 <div class="fixed-bottom d-flex justify-content-center">
-    <button style="width:200px;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i class="fa-solid fa-bars"></i> Menu</button>
+    <button class="btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i class="fa-solid fa-bars"></i> Menu</button>
 </div>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
@@ -36,9 +36,11 @@
 
     <div class="side-menu">
 
+        <!--
         <router-link to="/tchat">
         <div class="side-menu-link"><div class="container"><i class="fa-solid fa-comments"></i> Tchat</div></div>
         </router-link>
+        -->
 
         <a href="#">
         <div class="side-menu-link"><div class="container">Articles</div></div>

@@ -90,6 +90,7 @@ export default {
     methods: {
         userConnected() {
             console.log("New user connected")
+            console.log(this.$store.state.globalconfig.server)
             this.socketInstance = io(this.$store.state.globalconfig.server)
             //this.socketInstance = io("https://rihane-samy.fr:1000")
             this.joined = true; 
@@ -104,7 +105,6 @@ export default {
                     }
                 )
                 
-
                     this.socketInstance.on(
                         "message:received", (data) => {
                             this.messages = this.messages.concat(data)

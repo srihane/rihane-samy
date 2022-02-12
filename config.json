@@ -1,7 +1,7 @@
 {
-    "port": 2000,
-    "1server": "http://localhost:2000",
-    "server": "https://rihane-samy.fr:2000",
+    "port": 3001,
+    "1server": "http://localhost:3001",
+    "server": "https://rihane-samy.fr:3001",
 
     "database": {
         "host": "localhost",
